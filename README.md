@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍 My Shop – E-commerce Web App
 
-## Getting Started
+A responsive and modern e-commerce web app built with Next.js.  
+Users can browse products, add or remove them from the cart, and view their cart items with quantity and total price updates.  
+All cart data is stored in localStorage for persistence.
 
-First, run the development server:
+🔗 **Live Demo:** [https://my-shop-3z6k.vercel.app/](https://my-shop-3z6k.vercel.app/)
 
+---
+
+## 🚀 Features
+- Product listing with images and price  
+- Add / remove items from cart  
+- Quantity update support  
+- Persistent cart using localStorage  
+- Responsive layout for all screen sizes  
+- Smooth and fast navigation with Next.js  
+
+---
+
+## 📂 Project Structure
+my-shop/
+├── public/ # Static images and assets
+├── src/
+│ ├── app/
+│ │ ├── cart/ # Cart page
+│ │ ├── api/products/ # Product data
+│ │ └── page.js # Product listing page
+│ ├── store/ # Redux store setup
+│ └── components/ # Navbar and reusable components
+├── next.config.mjs
+├── package.json
+└── tailwind.config.js
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
 ```bash
+git clone https://github.com/your-username/my-shop.git
+cd my-shop
+2️⃣ Install Dependencies
+bash
+Copy code
+npm install
+3️⃣ Start Development Server
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Then open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🛒 Deployment
+This project is deployed on Vercel.
+Live URL: https://my-shop-3z6k.vercel.app/
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Push your changes to GitHub — Vercel will automatically rebuild and deploy the latest version.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🧩 How to Add Products
+Edit the file:
 
-## Learn More
+swift
+Copy code
+src/app/api/products/route.js
+Add your product like:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+js
+Copy code
+{
+  id: 1,
+  title: "New Product",
+  price: 99.99,
+  image: "/images/new-product.jpg"
+}
+✅ Summary
+My Shop is a simple, fast, and responsive e-commerce web app
+built with Next.js and Redux for state management,
+using localStorage to keep cart data persistent across sessions.
