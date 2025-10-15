@@ -43,39 +43,36 @@ Copy code
 ```bash
 git clone https://github.com/your-username/my-shop.git
 cd my-shop
+```
+```bash
 2️⃣ Install Dependencies
-bash
-Copy code
+
 npm install
+```
+```bash
 3️⃣ Start Development Server
-bash
-Copy code
 npm run dev
+```
+
 Then open http://localhost:3000 in your browser.
 
-🛒 Deployment
+## 🛒 Deployment
 This project is deployed on Vercel.
 Live URL: https://my-shop-3z6k.vercel.app/
 
 Push your changes to GitHub — Vercel will automatically rebuild and deploy the latest version.
 
-🧩 How to Add Products
-Edit the file:
+## 🧩 How to Add Products
 
-swift
-Copy code
 src/app/api/products/route.js
 Add your product like:
-
-js
-Copy code
 {
   id: 1,
   title: "New Product",
   price: 99.99,
   image: "/images/new-product.jpg"
 }
-✅ Summary
+## ✅ Summary
 My Shop is a simple, fast, and responsive e-commerce web app
 built with Next.js and Redux for state management,
 using localStorage to keep cart data persistent across sessions.
