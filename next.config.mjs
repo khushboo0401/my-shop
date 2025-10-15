@@ -6,11 +6,13 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: '**', // This allows all domains, but you might want to be more specific
+      },
     ],
-    unoptimized: true, // This is needed for static exports if you're using `next export`
   },
-  // If you're using `next export` (static HTML export), add this:
-  output: 'export',
+  // Remove output: 'export' since we're not doing a static export
 };
 
 export default nextConfig;

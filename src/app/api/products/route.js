@@ -1,3 +1,8 @@
+// Force dynamic route behavior
+// See: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic-rendering#using-dynamic-data-fetches
+
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
     const products = [
       { id: 1, title: "Watch Rolex", price: 199, image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3" },
