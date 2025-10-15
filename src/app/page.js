@@ -2,6 +2,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCart } from "@/store/cartSlice";
+import Image from "next/image";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -57,11 +58,15 @@ export default function Home() {
                 key={p.id}
                 className="border p-4 rounded-xl shadow hover:shadow-lg transition"
               >
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-40 object-cover rounded"
-                />
+                <div className="relative w-full h-40">
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    className="object-cover rounded"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
                 <h2 className="text-lg font-semibold mt-2">{p.title}</h2>
                 <p className="text-gray-600 mb-2">${p.price}</p>
 
@@ -78,7 +83,7 @@ export default function Home() {
           })
         ) : (
           <div className="col-span-full text-center py-10 ">
-            <p className="text-gray-500 text-lg">No products found matching "{searchQuery}"</p>
+            <p className="text-gray-500 text-lg">No products found matching &quot;{searchQuery}&quot;</p>
           </div>
         )}
       </div>
