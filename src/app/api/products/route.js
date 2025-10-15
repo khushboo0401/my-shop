@@ -10,13 +10,13 @@ export async function GET() {
       { id: 3, title: "Headphones JBL", price: 99, image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf" },
       { id: 4, title: "Headphones Boat", price: 199, image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf" },
       { id: 5, title: "Phone iPhone", price: 299, image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8" },
-      { id: 6, title: "Shoes Puma", price: 299, image: "./images/shoes1.jpg" },
-      { id: 7, title: "Shoes Adidas", price: 299, image: "./images/shoes2.jpg" },
-      { id: 8, title: "Tshirt polo", price: 299, image: "./images/tshirt.jpg" },
-      { id: 9, title: "shirt h&m", price: 299, image: "./images/shirt.jpg" },
-      { id: 10, title: "Tv lg", price: 299, image: "./images/tv.jpg" },
-      { id: 11, title: "Speaker", price: 299, image: "./images/speaker.jpg" },
-      { id: 12, title: "Laptop", price: 299, image: "./images/laptop.jpg" },
+      { id: 6, title: "Shoes Puma", price: 299, image: "/images/shoes1.jpg" },
+      { id: 7, title: "Shoes Adidas", price: 299, image: "/images/shoes2.jpg" },
+      { id: 8, title: "Tshirt polo", price: 299, image: "/images/tshirt.jpg" },
+      { id: 9, title: "shirt h&m", price: 299, image: "/images/shirt.jpg" },
+      { id: 10, title: "Tv lg", price: 299, image: "/images/tv.jpg" },
+      { id: 11, title: "Speaker", price: 299, image: "/images/speaker.jpg" },
+      { id: 12, title: "Laptop", price: 299, image: "/images/laptop.jpg" },
     ];
     return Response.json(products);
   }

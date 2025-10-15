@@ -65,6 +65,8 @@ export default function Home() {
                     fill
                     className="object-cover rounded"
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    unoptimized={p.image.startsWith('http')} // Only optimize local images
+                    priority={p.id <= 3} // Only preload first few images for better performance
                   />
                 </div>
                 <h2 className="text-lg font-semibold mt-2">{p.title}</h2>
